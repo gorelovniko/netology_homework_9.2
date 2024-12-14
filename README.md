@@ -24,7 +24,7 @@
 ![](img/HW9.2-1.2.JPG)
 
 
-'''bash
+``` bash 
 apt update
 apt install postgresql
 
@@ -46,7 +46,7 @@ sed -i 's/# listen 8080/listen 8080/g' /etc/zabbix/nginx.conf
 systemctl restart zabbix-server zabbix-agent nginx php8.2-fpm
 systemctl enable zabbix-server zabbix-agent nginx php8.2-fpm
 
-'''
+```
 
 ---
 
