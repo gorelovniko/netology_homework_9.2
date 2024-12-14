@@ -71,6 +71,25 @@ systemctl enable zabbix-server zabbix-agent nginx php8.2-fpm
 
 ### Решение 2
 
+![](img/HW9.2-2.1.JPG)
+![](img/HW9.2-2.2.JPG)
+![](img/HW9.2-2.3.1.JPG)
+![](img/HW9.2-2.3.2.JPG)
+
+```bash
+
+wget https://repo.zabbix.com/zabbix/7.2/release/debian/pool/main/z/zabbix-release/zabbix-release_latest_7.2+debian12_all.deb
+dpkg -i zabbix-release_latest_7.2+debian12_all.deb
+apt update
+
+apt install zabbix-agent
+
+sed -i 's/Server=127.0.0.1/Server=192.168.220.142/g' /etc/zabbix/zabbix_agentd.conf
+
+systemctl restart zabbix-agent
+systemctl enable zabbix-agent
+
+```
 
 
 ---
@@ -83,10 +102,8 @@ systemctl enable zabbix-server zabbix-agent nginx php8.2-fpm
 1. Приложите в файл README.md скриншот раздела Latest Data, где видно свободное место на диске C:
 --- 
 
-## Критерии оценки
+## Задание 3 со звёздочкой*
 
-1. Выполнено минимум 2 обязательных задания
-2. Прикреплены требуемые скриншоты и тексты 
-3. Задание оформлено в шаблоне с решением и опубликовано на GitHub
+![](img/HW9.2-3.JPG)
 
 ---
